@@ -11,10 +11,8 @@ distclean: clean
 	rm -rf venv
 
 venv:
-	virtualenv-2.7 -p python2.7 venv
-	$(PIP) install -U "pip>=7.0"
+	virtualenv -p python2.7 venv
 	$(PIP) install -r $(DEPS)
-	$(PIP) install bpython
 
 install: venv
 	$(PIP) install -r $(DEPS) -U

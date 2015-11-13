@@ -18,5 +18,5 @@ class TestRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         pass
 
 if __name__ == '__main__':
-    httpd = TestServer(('localhost', 6666), TestRequestHandler)
+    httpd = TestServer(('0.0.0.0', 8080), TestRequestHandler)
     httpd.serve_forever()
